@@ -1,4 +1,6 @@
 module Formula
+  attr_reader :largo, :ancho, :lado
+
   def perimetro(lado1, lado2)
     perimeter = (lado1 * 2) + (lado2 * 2)
     puts "El perímetro es de #{perimeter}"
@@ -8,6 +10,12 @@ module Formula
     area = lado1 * lado2
     puts "el área es de #{area}"
   end
+
+  def perimetro2
+    perimeter = (largo * 2) + (ancho * 2)
+    puts "El perímetro es de #{perimeter}"
+  end
+
 end
 
 class Rectangulo
@@ -35,6 +43,6 @@ end
 
 
 x = Rectangulo.new(10, 6)
-x.area(10, 6)
+x.perimetro2
 y = Cuadrado.new(15)
-y.area(15, 15)
+y.area(y.lado, y.lado)

@@ -13,8 +13,8 @@ class Alumno
     data.each do |alumno|
       alumnos << Alumno.new(*alumno.split(', '))
     end
-    print alumnos
+    alumnos
   end
 end
 
-Alumno.read_file
+print Alumno.read_file
